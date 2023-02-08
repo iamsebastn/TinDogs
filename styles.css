@@ -30,11 +30,6 @@ Container
     width: 100vw;
 }
 
-.page-content {
-    width: 100vw;
-    height: 100vh;
-}
-
 .nav-bar {
     width: 100%;
 
@@ -146,6 +141,16 @@ Buttons
     border: none;
 
     cursor: pointer;
+}
+
+#like-btn:hover {
+    background-color: #DBFFF4;
+    box-shadow: 0px 10px 20px #CCF1E6;
+}
+
+#nope-btn:hover {
+    background: #FFE7EF;
+    box-shadow: 0px 10px 20px #EDD9DF
 }
 
 
