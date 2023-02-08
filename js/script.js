@@ -1,29 +1,4 @@
-const dogs = [
-    {
-        name: "Rex",
-        avatar: "images/dog-rex.jpg",
-        age: 25,
-        bio: "Art. Literature. Natural wine. Yoga.",
-        hasBeenSwiped: false,
-        hasBeenLiked: false
-    },{
-        name: "Bella",
-        avatar: "images/dog-bella.jpg",
-        age: 43,
-        bio: "Yup, that's my owner. U can meet him if you want",
-        hasBeenSwiped: false,
-        hasBeenLiked: false
-    },
-    {
-        name: "Teddy",
-        avatar: "images/dog-teddy.jpg",
-        age: 30,
-        bio: "How you doin?",
-        hasBeenSwiped: false,
-        hasBeenLiked: false
-    }
-]
-console.log(dogs.name)
+import {dogs} from "./data.js"
 
 class Dog {
     constructor(data) {
@@ -45,22 +20,26 @@ class Dog {
     }
 }
 
-const dog = new Dog(dogs)
-
-function render() {
-    document.getElementById("profile-thumb").innerHTML = dog.renderProfile(dogs[0])
-}
-
 document.addEventListener("click", (e) => {
     if(e.target.id === "like-btn") {
-        console.log("The dog has been liked")
+        const likeStamp = document.getElementById("like-stamp")
+        likeStamp.classList.toggle("opacity-low")
+        setTimeout(()=> {
+            likeStamp.classList.toggle("opacity-low")
+        }, 1500)
     } else if (e.target.id === "nope-btn") {
-        console.log("the dog has been noped")
-    } else {
-        console.log("I clicked somewhere")
+        const nopeStamp = document.getElementById("nope-stamp")
+        nopeStamp.classList.toggle("opacity-low")
+        setTimeout(()=> {
+            nopeStamp.classList.toggle("opacity-low")
+        }, 1500)
     }
 })
 
-render()
+const dogObj = new Dog(dogs)
+function render() {
+    document.getElementById("profile-thumb").innerHTML = dogObj.renderProfile(dogs[0])
+}
 
+render()
 

@@ -1,4 +1,4 @@
-const dogs = [
+export const dogs = [
     {
         name: "Rex",
         avatar: "images/dog-rex.jpg",
@@ -23,6 +23,3 @@ const dogs = [
         hasBeenLiked: false
     }
 ]
-console.log(dogs.name)
-
-export default dogs

@@ -1,11 +1,21 @@
-import dogs from "./data";
+import {dogs} from "./data"
 
 class Dog {
     constructor(data) {
         Object.assign(this, data)
     }
+    renderProfile(data) {
+        const {name, avatar, age, bio} = data
+        return `
+            <img class="profile_img" src="${avatar}">
+            <div class="profile_desc">
+                <p class="p_head">${name}, ${age}</p>
+                <p class="p_body">${bio}</p>
+            </div>
+        `
+    }
+    showLike() {
+    }
+    showNope() {
+    }
 }
-
-const dog = new Dog(dogs[1])
-
-console.log(dog)
