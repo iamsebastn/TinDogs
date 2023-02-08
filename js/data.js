@@ -23,5 +23,6 @@ const dogs = [
         hasBeenLiked: false
     }
 ]
+console.log(dogs.name)
 
 export default dogs
