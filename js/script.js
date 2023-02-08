@@ -39,23 +39,28 @@ class Dog {
             </div>
         `
     }
-
     showLike() {
-
     }
     showNope() {
-
     }
 }
+
+const dog = new Dog(dogs)
 
 function render() {
     document.getElementById("profile-thumb").innerHTML = dog.renderProfile(dogs[0])
 }
 
-const dog = new Dog(dogs)
+document.addEventListener("click", (e) => {
+    if(e.target.id === "like-btn") {
+        console.log("The dog has been liked")
+    } else if (e.target.id === "nope-btn") {
+        console.log("the dog has been noped")
+    } else {
+        console.log("I clicked somewhere")
+    }
+})
+
 render()
 
 
-document.addEventListener("click", () => {
-    console.log("JS connected")
-})
