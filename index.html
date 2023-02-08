@@ -8,22 +8,25 @@
     <title>TinDogs</title>
 </head>
 <body>
-    <header>
+    <header class="page-header">
         <nav class="nav-bar">
-            <img class="nav_img" src="images/icon-profile.png">
-            <img class="nav_img" src="images/logo.png">
-            <img class="nav_img" src="images/icon-chat.png">
+            <img class="nav-img" src="images/icon-profile.png">
+            <img class="nav-img" src="images/logo.png">
+            <img class="nav-img" src="images/icon-chat.png">
         </nav>
     </header>
     <main class="page-content" id="page-content">
-        
-        
+        <section class="profile-overview">
+            <div class="profile-thumb">
+                <img src="images/dog-rex.jpg">
+            </div>
+        </section>
         <section class="btn_wrap" id="btn_wrap">
-            <button>
-                <img src="images/icon-heart.png">
+            <button class="interact-btn" id="like-btn">
+                <img src="images/icon-cross.png" class="like-icon">
             </button>
-            <button>
-                <img src="images/icon-heart.png">
+            <button class="interact-btn" id="nope-btn">
+                <img src="images/icon-heart.png" class="nope-icon">
             </button>
         </section>
     </main>
