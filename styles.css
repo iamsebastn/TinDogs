@@ -3,6 +3,12 @@
 body {
     font-family: 'Poppins', sans-serif;
     background-color: #f2f2f2;
+
+    width: 100%;
+    height: 100vh;
+
+    overflow: hidden;
+    position: relative;
 }
 
 * {
@@ -21,14 +27,6 @@ body {
 Container
 ========== */
 
-.page-content {
-    width: 100%;
-    height: 100vh;
-
-    overflow: hidden;
-    position: relative;
-}
-
 .nav-bar {
     width: 100%;
     height: 5em;
@@ -43,6 +41,14 @@ Container
     position: fixed;
 }
 
+
+.btn_wrap {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
 /* ========== 
 Typography
