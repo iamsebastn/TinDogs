@@ -46,7 +46,6 @@ Container
 .profile_thumb {
     width: 100%;
     padding: 0 0.625em;
-    height: 77.5vh;
 
     overflow: hidden;
     position: relative;
@@ -73,6 +72,14 @@ Container
     column-gap: 1.5em;
 
     padding: 1.5em 0
+}
+
+.liked-obj {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    column-gap: 1em;
 }
 
 /* ========== 
@@ -110,14 +117,22 @@ Images
     height: 2.625em;
 }
 
-.profile_img {
-    width: 100%;
-    height: 100%;
-
+.profile_img,
+.profile_img_s {
     object-fit: cover;
     object-position: center;
 
     border-radius: 15px;
+}
+
+.profile_img {
+    width: 100%;
+    height: 77.5vh;
+}
+
+.profile_img_s {
+    width: 8em;
+    height: 8em;
 }
 
 .like-icon,
@@ -182,4 +197,8 @@ Utils
 ========== */
 .opacity-low {
     opacity: 0;
+}
+
+.black {
+    color: #000;
 }

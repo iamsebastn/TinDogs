@@ -1,50 +1,25 @@
 import {dogs} from "./data.js"
+import {Dog} from "./dog.js"
 
-class Dog {
-    constructor(data) {
-        Object.assign(this, data)
-    }
-    renderProfile(data) {
-        const {name, avatar, age, bio} = data
-        return `
-            <img class="profile_img" src="${avatar}">
-            <div class="profile_desc">
-                <p class="p_head">${name}, ${age}</p>
-                <p class="p_body">${bio}</p>
-            </div>
-        `
-    }
-    showLike() {
-    }
-    showNope() {
-    }
-}
-
-document.addEventListener("click", (e) => {
-    if(e.target.id === "like-btn") {
-        const likeStamp = document.getElementById("like-stamp")
-        likeStamp.classList.toggle("opacity-low")
-        setTimeout(()=> {
-            likeStamp.classList.toggle("opacity-low")
-        }, 1500)
-    } else if (e.target.id === "nope-btn") {
-        const nopeStamp = document.getElementById("nope-stamp")
-        nopeStamp.classList.toggle("opacity-low")
-        setTimeout(()=> {
-            nopeStamp.classList.toggle("opacity-low")
-        }, 1500)
-    }
-    dogs.shift()
-    setTimeout(() => {
-        render()
-    },1500)
-})
+const likesArray = []
 
 const dogObj = new Dog(dogs)
 function render() {
     document.getElementById("profile-thumb").innerHTML = dogObj.renderProfile(dogs[0])
 }
 
-
 render()
 
+// function renderSummary() {
+//     const likedSummary = likesArray.map((like) => {
+//         return `
+//         <div class="liked-obj">
+//             <img class="profile_img_s" src="images/dog-rex.jpg">
+//             <div>
+//                 <p class="p_head black">${like.name}, ${like.age}</p>
+//                 <p class="p_body">${like.bio}</p>
+//             </div>
+//         </div> 
+//         `
+//     })
+// }

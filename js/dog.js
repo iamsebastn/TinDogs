@@ -1,4 +1,3 @@
-
 class Dog {
     constructor(data) {
         Object.assign(this, data)
@@ -13,8 +12,11 @@ class Dog {
             </div>
         `
     }
-    showLike() {
+    handleLikeClick() {
+        likesArray.push(this)
     }
     showNope() {
     }
 }
+
+export { Dog }
