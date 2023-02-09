@@ -1,4 +1,3 @@
-import {dogs} from "./data"
 
 class Dog {
     constructor(data) {
