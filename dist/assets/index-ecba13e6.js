@@ -1,0 +1,7 @@
+(function(){const o=document.createElement("link").relList;if(o&&o.supports&&o.supports("modulepreload"))return;for(const e of document.querySelectorAll('link[rel="modulepreload"]'))t(e);new MutationObserver(e=>{for(const r of e)if(r.type==="childList")for(const i of r.addedNodes)i.tagName==="LINK"&&i.rel==="modulepreload"&&t(i)}).observe(document,{childList:!0,subtree:!0});function s(e){const r={};return e.integrity&&(r.integrity=e.integrity),e.referrerpolicy&&(r.referrerPolicy=e.referrerpolicy),e.crossorigin==="use-credentials"?r.credentials="include":e.crossorigin==="anonymous"?r.credentials="omit":r.credentials="same-origin",r}function t(e){if(e.ep)return;e.ep=!0;const r=s(e);fetch(e.href,r)}})();const n=[{name:"Rex",avatar:"images/dog-rex.jpg",age:25,bio:"Art. Literature. Natural wine. Yoga.",hasBeenSwiped:!1,hasBeenLiked:!1},{name:"Bella",avatar:"images/dog-bella.jpg",age:43,bio:"Yup, that's my owner. U can meet him if you want",hasBeenSwiped:!1,hasBeenLiked:!1},{name:"Teddy",avatar:"images/dog-teddy.jpg",age:30,bio:"How you doin?",hasBeenSwiped:!1,hasBeenLiked:!1}];class l{constructor(o){Object.assign(this,o)}renderProfile(o){const{name:s,avatar:t,age:e,bio:r}=o;return`
+            <img class="profile_img" src="${t}">
+            <div class="profile_desc">
+                <p class="p_head">${s}, ${e}</p>
+                <p class="p_body">${r}</p>
+            </div>
+        `}handleLikeClick(){likesArray.push(this)}showNope(){}}const d=new l(n);function c(){document.getElementById("profile-thumb").innerHTML=d.renderProfile(n[0])}c();
