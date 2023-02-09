@@ -34,12 +34,17 @@ document.addEventListener("click", (e) => {
             nopeStamp.classList.toggle("opacity-low")
         }, 1500)
     }
+    dogs.shift()
+    setTimeout(() => {
+        render()
+    },1500)
 })
 
 const dogObj = new Dog(dogs)
 function render() {
     document.getElementById("profile-thumb").innerHTML = dogObj.renderProfile(dogs[0])
 }
+
 
 render()
 
