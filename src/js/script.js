@@ -6,7 +6,6 @@ let currentIndex = 0
 let dogObj = new Dog(dogs[currentIndex])
 document.getElementById("like-btn").addEventListener("click", liked)
 document.getElementById("nope-btn").addEventListener("click", noped)
-document.getElementById("nav-btn").addEventListener("click", restart)
 
 render()
     
@@ -57,10 +56,6 @@ function noped() {
     }, 1500)
 }
 
-function restart() {
-    currentIndex = 0
-    render()
-}
 
 // `
 //         <div class="liked-obj">
@@ -71,5 +66,3 @@ function restart() {
 //             </div>
 //         </div>       
 //         `
-
-let tl = gsap.timeline
