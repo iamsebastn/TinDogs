@@ -3,15 +3,9 @@ import Dog from "./Dog.js"
 
 let currentIndex = 0
 let dogObj = new Dog(dogs[currentIndex])
+document.getElementById("like-btn").addEventListener("click", liked)
 
 render()
-
-document.getElementById("like-btn").addEventListener("click", () => {
-    liked()
-    if(currentIndex === dogs.length) {
-        likedMatches()
-    }
-})
     
 function render() {
     document.getElementById("profile-thumb").innerHTML = dogObj.getDogHtml()
@@ -38,5 +32,18 @@ function noped() {
 
 }
 
+function restart() {
+    currentIndex = 0
+    render()
+}
 
+// `
+//         <div class="liked-obj">
+//             <img class="profile_img_s" src="${dog.avatar}">
+//             <div>
+//                 <p class="p_head black">${dog.name}, ${dog.age}</p>
+//                 <p class="p_body">${dog.bio}</p>
+//             </div>
+//         </div>       
+//         `
 
