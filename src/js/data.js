@@ -22,7 +22,23 @@ export const dogs = [
         bio: "How you doin?",
         hasBeenSwiped: false,
         hasBeenLiked: false
-    }
+    },
+    {
+        name: "Roxy",
+        avatar: "images/dog-roxy.jpeg",
+        age: 28,
+        bio: "Yep, that's the look you get each morning <3",
+        hasBeenSwiped: false,
+        hasBeenLiked: false
+    },
+    {
+        name: "Slava",
+        avatar: "images/dog-slava.jpg",
+        age: 19,
+        bio: "I'm looking mean outsite. But within I'm a cupcake",
+        hasBeenSwiped: false,
+        hasBeenLiked: false
+    },
 ]
 
 

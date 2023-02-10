@@ -8,10 +8,12 @@ class Dog {
     getDogHtml() {
         const {name, avatar, age, bio} = this
         return `
-            <img class="profile_img" src="${avatar}">
-            <div class="profile_desc">
-                <p class="p_head">${name}, ${age}</p>
-                <p class="p_body">${bio}</p>
+            <div class="profile-card">
+                <img class="profile_img" src="${avatar}">
+                <div class="profile_desc">
+                    <p class="p_head">${name}, ${age}</p>
+                    <p class="p_body">${bio}</p>
+                </div>
             </div>
         `
     }

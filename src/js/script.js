@@ -1,9 +1,12 @@
+import { gsap } from "gsap"
 import { dogs } from "./data.js"
 import Dog from "./Dog.js"
 
 let currentIndex = 0
 let dogObj = new Dog(dogs[currentIndex])
 document.getElementById("like-btn").addEventListener("click", liked)
+document.getElementById("nope-btn").addEventListener("click", noped)
+document.getElementById("nav-btn").addEventListener("click", restart)
 
 render()
     
@@ -21,6 +24,14 @@ function liked() {
     let likeStamp = document.getElementById("like-stamp")
     dogObj.hasBeenLiked = true
     likeStamp.classList.toggle("opacity-low")
+
+    gsap.to(".profile-card", {
+        x: "150vw",
+        rotation: -25,
+        duration: 1,
+        ease: "power4.out"
+    })
+
     setTimeout(() => {
         likeStamp.classList.toggle("opacity-low")
         getNextDog()
@@ -29,7 +40,21 @@ function liked() {
 }
 
 function noped() {
+    let nopeStamp = document.getElementById("nope-stamp")
+    nopeStamp.classList.toggle("opacity-low")
 
+    gsap.to(".profile-card", {
+        x: "-150vw",
+        rotation: 25,
+        duration: 1,
+        ease: "power4.out"
+    })
+
+    setTimeout(() => {
+        nopeStamp.classList.toggle("opacity-low")
+        getNextDog()
+        render()
+    }, 1500)
 }
 
 function restart() {
@@ -47,3 +72,4 @@ function restart() {
 //         </div>       
 //         `
 
+let tl = gsap.timeline
