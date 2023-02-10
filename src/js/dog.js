@@ -4,7 +4,7 @@ class Dog {
     constructor(data) {
         Object.assign(this, data)
     }
-    
+
     getDogHtml() {
         const {name, avatar, age, bio} = this
         return `
@@ -14,6 +14,10 @@ class Dog {
                 <p class="p_body">${bio}</p>
             </div>
         `
+    }
+    setMatchStatus(bool) {
+        this.hasBeenSwiped = true
+        this.hasBeenLiked = bool
     }
 }
 
