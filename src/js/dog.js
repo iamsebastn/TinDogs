@@ -1,3 +1,5 @@
+import { dogs } from "./data.js"
+
 class Dog {
     constructor(data) {
         Object.assign(this, data)
@@ -13,10 +15,12 @@ class Dog {
         `
     }
     handleLikeClick() {
-        likesArray.push(this)
+        
     }
     showNope() {
     }
+
+
 }
 
-export { Dog }
+export default Dog
