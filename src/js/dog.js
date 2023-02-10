@@ -4,8 +4,9 @@ class Dog {
     constructor(data) {
         Object.assign(this, data)
     }
-    renderProfile(data) {
-        const {name, avatar, age, bio} = data
+    
+    getDogHtml() {
+        const {name, avatar, age, bio} = this
         return `
             <img class="profile_img" src="${avatar}">
             <div class="profile_desc">
@@ -14,13 +15,6 @@ class Dog {
             </div>
         `
     }
-    handleLikeClick() {
-        
-    }
-    showNope() {
-    }
-
-
 }
 
 export default Dog

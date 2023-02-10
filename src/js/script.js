@@ -1,28 +1,26 @@
 import { dogs } from "./data.js"
-import { renderSummary } from "./utils.js"
 import Dog from "./Dog.js"
 
+const likedArray = []
 
-let likesArray = []
+document.addEventListener("click", (e) => {
+    if(e.target.id = "like-btn") {
+        likedArray.push()
+        dogs.shift()
+    } else if (e.target.id = "nope-btn") {
+        dogs.shift()
+    }
+    render()
+})
 
-function showSummary() {
-    const likedDogs = likesArray.map((dog) => {
-        return `
-        <img class="profile_img" src="${avatar}">
-        <div class="profile_desc">
-            <p class="p_head">${name}, ${age}</p>
-            <p class="p_body">${bio}</p>
-        </div>
-    `
-    })
+function getNewDog() {
+    const nextDogData = dogs[0]
+    return nextDogData ? new Dog(nextDogData) : {}
 }
 
 function render() {
-    document.getElementById("profile-thumb").innerHTML = dogObj.renderProfile(dogs[0])
+    let dogObj = new Dog(dogs[0])
+    document.getElementById("profile-thumb").innerHTML = dogObj.getDogHtml()
 }
-const dogObj = new Dog(dogs)
-render()
 
-document.addEventListener("click", () => {
-    renderSummary()
-})
+render()
