@@ -1,4 +1,4 @@
-class Dog {
+export class Dog {
     constructor(data) {
         Object.assign(this, data)
     }
@@ -22,6 +22,4 @@ class Dog {
         this.hasBeenLiked = bool
     }
 }
-
-export default Dog
 

@@ -1,8 +1,8 @@
 import { gsap } from "gsap"
 import { dogs } from "./data.js"
-import Dog from "./Dog.js"
+import { Dog } from "./Dog.js"
 
-let likedDogs = []
+let likedDogsArray = []
 let currentIndex = 0
 let dogObj = new Dog(dogs[currentIndex])
 document.getElementById("like-btn").addEventListener("click", liked)
@@ -17,7 +17,7 @@ function renderScreen() {
         getNextDog()
         renderDog()
     } else {
-        const matchedDogs = likedDogs.map((dog) => {
+        const matchedDogs = likedDogsArray.map((dog) => {
             return `
                     <div class="liked-obj">
                         <img class="profile_img_s" src="${dog.avatar}">
@@ -39,7 +39,7 @@ function getNextDog() {
 }
 
 function liked() {
-    likedDogs.push(dogObj)
+    likedDogsArray.push(dogObj)
     gsap.fromTo(".img-huge.like", {
         opacity: 0,
         scale: 2
