@@ -34,6 +34,10 @@ Container
     border-radius: 15px;
 }
 
+.profile-card {
+    position: relative
+}
+
 .profile_desc {
     position: absolute;
 
