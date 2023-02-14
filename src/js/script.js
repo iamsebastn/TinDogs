@@ -90,12 +90,3 @@ function noped() {
 
 render()
 
-// `
-//         <div class="liked-obj">
-//             <img class="profile_img_s" src="${dog.avatar}">
-//             <div>
-//                 <p class="p_head black">${dog.name}, ${dog.age}</p>
-//                 <p class="p_body">${dog.bio}</p>
-//             </div>
-//         </div>       
-//         `
