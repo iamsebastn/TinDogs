@@ -8,14 +8,14 @@ let dogObj = new Dog(dogs[currentIndex])
 document.getElementById("like-btn").addEventListener("click", liked)
 document.getElementById("nope-btn").addEventListener("click", noped)
     
-function render() {
+function renderDog() {
     document.getElementById("profile-thumb").innerHTML = dogObj.getDogHtml()
 }
 
-function renderMatches() {
+function renderScreen() {
     if(currentIndex < dogs.length -1) {
         getNextDog()
-        render()
+        renderDog()
     } else {
         const matchedDogs = likedDogs.map((dog) => {
             return `
@@ -35,7 +35,7 @@ function renderMatches() {
 function getNextDog() {
     currentIndex++
     dogObj = new Dog(dogs[currentIndex])
-    render()
+    renderDog()
 }
 
 function liked() {
@@ -59,7 +59,7 @@ function liked() {
     }, 750)
 
     setTimeout(() => {
-        renderMatches()
+        renderScreen()
     }, 2000)
 }
 
@@ -84,9 +84,9 @@ function noped() {
     }, 750)
 
     setTimeout(() => {
-        renderMatches()
+        renderScreen()
     }, 1500)
 }
 
-render()
+renderDog()
 
