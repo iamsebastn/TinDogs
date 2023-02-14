@@ -1,6 +1,6 @@
 import { gsap } from "gsap"
-import Dog from "./Dog.js"
 import { dogs } from "./data.js"
+import Dog from "./Dog.js"
 
 let likedDogs = []
 let currentIndex = 0
