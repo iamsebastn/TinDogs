@@ -95,7 +95,6 @@ Typography
     color: #B7B7B7;
 }
 
-
 /* ========== 
 Images
 ========== */
@@ -123,7 +122,9 @@ Images
 
 .profile_img_s {
     min-width: 8em;
+    max-width: 8em;
     height: 8em;
+    object-fit: cover;
 }
 
 .like-icon,
@@ -151,6 +152,11 @@ Images
     right: 1.5em;
     top: 15em;
     transform: rotate(26deg);
+}
+
+.img-huge.like,
+.img-huge.nope {
+    opacity: 0;
 }
 
 

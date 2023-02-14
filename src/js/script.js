@@ -40,35 +40,53 @@ function getNextDog() {
 
 function liked() {
     likedDogs.push(dogObj)
-
-    gsap.to(".profile-card", {
-        x: "150vw",
-        rotation: -25,
-        duration: 1,
-        ease: "power4.out"
+    gsap.fromTo(".img-huge.like", {
+        opacity: 0,
+        scale: 2
+    }, {
+        opacity: 1,
+        scale: 1,
+        duration: 0.5,
+        ease: "expo.out"
     })
+    setTimeout(() => {
+        gsap.to(".profile-card", {
+            x: "150vw",
+            rotation: -25,
+            duration: 1,
+            ease: "power4.out"
+        })
+    }, 750)
 
     setTimeout(() => {
         renderMatches()
-    }, 1500)
+    }, 2000)
 }
 
 function noped() {
     dogObj.setMatchStatus(false)
-
-    gsap.to(".profile-card", {
-        x: "-150vw",
-        rotation: 25,
-        duration: 1,
-        ease: "power4.out"
+    gsap.fromTo(".img-huge.nope", {
+        opacity: 0,
+        scale: 2
+    }, {
+        opacity: 1,
+        scale: 1,
+        duration: 0.5,
+        ease: "expo.out"
     })
+    setTimeout(() => {
+        gsap.to(".profile-card", {
+            x: "-150vw",
+            rotation: 25,
+            duration: 1,
+            ease: "power4.out"
+        })
+    }, 750)
 
     setTimeout(() => {
         renderMatches()
     }, 1500)
 }
-
-
 
 render()
 
